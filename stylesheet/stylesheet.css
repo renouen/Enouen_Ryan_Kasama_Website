@@ -1,0 +1,251 @@
+/* Global Selectors */
+body {
+    background-color: #FFFFFC;
+    margin: 0; 
+    padding: 0; 
+}
+img {
+    max-width: 100%; 
+    height: auto; 
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color:#FFFFFC;
+}
+span {
+    font-size: 50px !important;
+}
+
+/* Containers */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.flex-container-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.nav-flex-container {
+    display: flex;
+    grid-area: right;
+    gap: 10px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+.container {
+    padding-top: 100px;
+    margin-left: 90px;
+    place-items: center;
+}
+.container h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 100px;
+    color: #EC2729;
+    font-size: 25pt;
+}
+.container p {
+    margin-right: 100px;
+    font-size: 14pt;
+}
+.container-2 {
+    margin-left: 70px;
+    justify-content: center;
+    padding-right: 150px;
+}
+
+/* Nav */
+.nav {
+    background-color: #EC2729;
+    grid-area: right;
+    padding: 20px;
+    text-align: right;
+    grid-column: 3;
+}
+.nav a {
+    place-items: right;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 55px;
+    color: white;
+    font-size: 15pt;
+}
+.nav-container {
+    place-items: right;
+    background-color: #EC2729;
+    display: flex;
+    gap: 20px;
+ }
+
+/*Header image */
+.header {
+    display: grid;
+}
+.header-container {
+    place-items: center;
+    background-color: #EC2729;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+ }
+.background {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    overflow: hidden;
+}
+.background-shrunk{
+    overflow: hidden;
+}
+.foreground {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.menu-container {
+    padding-left: 70px;
+    color: #EC2729;
+}
+.menu-container p {
+    font-size: 28pt;
+    padding-top: 100px;
+}
+.menu-container a {
+    font-size: 72pt;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #EC2729;
+}
+
+/*Mobile nav*/
+#mobile-menu {
+    background-color:#FFFFFC;
+    position: fixed;
+    top: 0;
+    lefT: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    align-items: center;
+}
+#mobile-menu a {
+    color: #EC2729;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    font-size: 30pt;
+}
+#mobile-button {
+    margin-left:50px;
+    margin-bottom: 25px;
+}
+#close-menu {
+    color: #060000; 
+    font-size: 40px !important;
+    padding-left: 20px;
+    padding-bottom: 25px;
+}
+
+/* Footer */
+.footer {
+    background-color: #0B0B0B;
+    height: 200px;
+    margin-top: 125px;
+    color: #EC2729;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.footer h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animation */
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+h2:hover {
+   color: black;
+   animation-name: fade-in;
+   animation-duration: 2.5s;
+}
+.fade-text {
+    color: #EC2729; 
+    transition: color 0.5s ease;
+}
+.fade-text:hover {
+    color: #060000; 
+}
+.fade-footer {
+    color: #EC2729; 
+    transition: color 0.5s ease;
+}
+.fade-footer:hover {
+    color:#FFFFFC;
+}
+.hidden {
+    display: none; 
+}
+.hidden-2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.material-symbols-outlined {  
+    font-variation-settings:  
+        'FILL' 1,  
+        'wght' 400,  
+        'GRAD' 0,  
+        'opsz' 24
+}
+.nav button {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .hidden-2 {
+      display: none; 
+    }
+    .nav a {
+        display: none;
+    }
+    .nav button{
+        display: inline;
+    }
+    .container {
+        width: 50%;
+        font-size: 50%;
+      }
+    .header {
+        width: 100%;
+    }
+    .footer {
+        height: 480px;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding-left: 100px;
+    }
+    .menu-container {
+        padding-left: 130px;
+    }
+    .background-shrunk {
+        overflow: hidden;
+        width: 77%;
+    }
+  }
+
